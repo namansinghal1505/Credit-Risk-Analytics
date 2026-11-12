@@ -24,8 +24,13 @@ in borrower financial behavior.
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from utils import load_data
+
+# Load the dataset (previously assumed to exist as `dataset`)
+dataset = load_data()
+
 # Compute correlation matrix for numerical variables
-corr = dataset.corr()
+corr = dataset.select_dtypes('number').drop(columns=['Loan_to_Income_Pct']).corr()
 
 # Create figure with defined size
 plt.figure(figsize=(8,6))

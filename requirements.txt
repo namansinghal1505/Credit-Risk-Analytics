@@ -1,0 +1,8 @@
+pandas
+numpy
+scipy
+scikit-learn
+seaborn
+matplotlib
+networkx
+duckdb   # optional: only to run the SQL files locally

@@ -18,9 +18,15 @@ between approved and defaulted loans.
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from utils import load_data
+
+# Load the dataset (previously assumed to exist as `dataset`)
+dataset = load_data()
+
 # Generate pair plot for multivariable relationship analysis
+cols = ["Annual_Income", "Loan_Amount", "Credit_Score", "Interest_Rate", "Loan_Status"]
 sns.pairplot(
-    dataset,
+    dataset[cols],
     hue="Loan_Status",   # Color the plots based on loan status
     corner=True          # Show only lower triangle to reduce redundancy
 )

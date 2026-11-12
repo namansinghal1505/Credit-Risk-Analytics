@@ -20,15 +20,19 @@ within the loan portfolio.
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from utils import load_data
+
+# Load the dataset (previously assumed to exist as `dataset`)
+dataset = load_data()
+
 # Create an empty graph
 G = nx.Graph()
 
 # Add edges between Region and Loan Purpose
-for i in range(len(dataset)):
-    G.add_edge(
-        dataset.iloc[i]["Region"],       # Region node
-        dataset.iloc[i]["Loan_Purpose"]  # Loan purpose node
-    )
+# Weight each edge by the number of loans so thicker edges = more loans
+pairs = dataset.groupby(["Region", "Loan_Purpose"]).size().reset_index(name="loans")
+for _, row in pairs.iterrows():
+    G.add_edge(row["Region"], row["Loan_Purpose"], weight=row["loans"])
 
 # Set figure size
 plt.figure(figsize=(10,8))

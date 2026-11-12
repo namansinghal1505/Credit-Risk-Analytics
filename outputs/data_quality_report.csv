@@ -1,0 +1,13 @@
+check,status,detail
+No missing values,PASS,0 nulls
+Customer_ID unique,PASS,0 duplicates
+Loan_ID unique,PASS,0 duplicates
+No fully duplicated rows,PASS,0 duplicate rows
+Credit score within 300-900,PASS,"min=300, max=900"
+Age within 18-100,PASS,"min=21, max=65"
+Interest rate between 0 and 30,PASS,"min=5.0, max=18.0"
+Approval date not before application date,PASS,0 rows
+Loan_Status consistent with Default_Risk_Flag,PASS,0 mismatches
+'Debt_to_Income_Ratio_%' is a true DTI,FLAG,"Equals Loan_Amount / Annual_Income x 100 (max diff 0.005). It is a loan-to-income ratio, not DTI. No existing-debt service data is present."
+Loan-to-income ratio within plausible range (<= 100%),FLAG,95.7% of loans exceed 100% of annual income
+Target class balance usable for modelling,FLAG,Default rate 99.62%; only 46 non-default loans

@@ -1,0 +1,16 @@
+,coefficient
+num__Loan_Amount,7.253638887412806
+num__Account_Balance,5.40958179393878
+num__Annual_Income,-5.223308174529054
+num__Credit_Score,-3.044918652390477
+num__Balance_to_Loan,-2.9215610143055804
+cat__Loan_Purpose_Car Loan,1.7494293180949767
+cat__Loan_Purpose_Home Loan,-1.5860088619541854
+cat__Region_North,-1.0406021332994992
+cat__Employment_Type_Self-Employed,1.0304310012883535
+cat__Marital_Status_Divorced,-0.8254932289148064
+cat__Education_Level_PhD,-0.8120589699934907
+cat__Region_Central,0.8108864673122549
+num__Loan_to_Income_Pct,0.7637850484870456
+cat__Marital_Status_Single,0.707110555068045
+num__Interest_to_Income,0.667934167357678

@@ -18,6 +18,11 @@ allowing deeper insight into borrower risk distribution.
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from utils import load_data
+
+# Load the dataset (previously assumed to exist as `dataset`)
+dataset = load_data()
+
 # Set figure size for better visualization
 plt.figure(figsize=(8,6))
 
@@ -25,6 +30,8 @@ plt.figure(figsize=(8,6))
 sns.violinplot(
     x=dataset["Loan_Status"],      # Loan status categories
     y=dataset["Credit_Score"],     # Credit score distribution
+    hue=dataset["Loan_Status"],
+    legend=False,
     palette={
         "Approved": "#2ECC71",     # Green for approved loans
         "Default": "#D7263D"       # Red for defaulted loans
