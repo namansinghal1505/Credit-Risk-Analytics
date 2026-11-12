@@ -2,7 +2,6 @@
 Credit Risk Analytics Dashboard
 Visualization: Advanced Financial Correlation Heatmap
 
-Author: Devaraju K G
 
 Description:
 This script generates a correlation heatmap to analyze the

@@ -2,7 +2,7 @@
 Credit Risk Analytics Dashboard
 Visualization: Credit Score Violin Distribution
 
-Author: Devaraju K G
+
 
 Description:
 This script generates a violin plot to visualize the distribution
